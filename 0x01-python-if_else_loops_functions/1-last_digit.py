@@ -10,7 +10,7 @@ if number >= 0:
         print('Last digit of {} is {} {}'.format(number, last, prefive))
     if last == 0:
         print('Last digit of {} is {} and is 0'.format(number, last))
-    if last < 6:
+    if last < 6 and last > 0:
         print('Last digit of {} is {} {}'.format(number, last, presix))
-else:
+elif number < 0:
     print('Last digit of {} is -{} {}'.format(number, last_neg, presix))
