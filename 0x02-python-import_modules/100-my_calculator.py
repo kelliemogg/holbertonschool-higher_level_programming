@@ -13,11 +13,11 @@ if __name__ == "__main__":
     if args != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    elif args == 4:
+    else:
         if argv[2] == '+':
             print("{} + {} = {}".format(a, b, add))
         elif argv[2] == '-':
-            print("{} + {} = {}".format(a, b, sub))
+            print("{} - {} = {}".format(a, b, sub))
         elif argv[2] == '*':
             print("{} * {} = {}".format(a, b, mul))
         elif argv[2] == '/':
