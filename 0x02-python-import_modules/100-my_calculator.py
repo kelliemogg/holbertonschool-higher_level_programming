@@ -22,6 +22,6 @@ elif args == 4:
         print("{} * {} = {}".format(a, b, mul))
     elif argv[2] == '/':
         print("{} / {} = {}".format(a, b, div))
-    else:
-        print("Unknown operator. Available operators: +, -, * and /")
-        exit(1)
+else:
+    print("Unknown operator. Available operators: +, -, * and /")
+    exit(1)
