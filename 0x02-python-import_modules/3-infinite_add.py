@@ -9,3 +9,7 @@ if __name__ == "__main__":
             argv[i] = int(argv[i])
             my_sum += argv[i]
         print(my_sum)
+    elif num == 2:
+        print(argv[1])
+    else:
+        print(0)
