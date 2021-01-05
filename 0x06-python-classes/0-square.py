@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-
-"""Enter Module"""
+"""Module Goes Here"""
 
 
 class Square:
