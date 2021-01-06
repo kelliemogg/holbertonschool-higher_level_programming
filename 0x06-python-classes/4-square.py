@@ -6,13 +6,13 @@ class Square:
     """ Sq Class defines sq by size, a private instance attribute """
 
     def __init__(self, size=0):
-        size = self.__size
+        self.__size = size
 
     @property
     def size(self):
-        return (size)
+        return (self.__size)
 
-    @setter
+    @size.setter
     def size(self, size):
         if isinstance(size, int):
             if size < 0:
