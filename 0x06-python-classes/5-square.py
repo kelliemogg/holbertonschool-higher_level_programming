@@ -27,7 +27,8 @@ class Square:
         return(area)
 
     def my_print(self):
-        if size is 0:
+        if self.__size is 0:
             print("")
         else:
-            print("#{:d}".format(size))
+            for i in range(self.__size):
+                print("#".format(self.__size), end="")
