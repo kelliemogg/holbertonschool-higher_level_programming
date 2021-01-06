@@ -25,3 +25,9 @@ class Square:
     def area(self):
         area = (self.__size) * (self.__size)
         return(area)
+
+    def my_print(self):
+        if size is 0:
+            print("")
+        else:
+            print("#{:d}".format(size))
