@@ -1,0 +1,71 @@
+============================
+doctest for 0-add_integer.py
+============================
+
+Using ``add_integer()``
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+addition of two single digit integers
+::
+>>> add_integer(1, 2)
+3
+
+addition of two multi digit integers
+::
+>>> add_integer(123, 456)
+579
+
+addition of two negative integers
+::
+>>> add_integer(-9, -2)
+-11
+
+addition of one positive, one negative integers
+::
+>>> add_integer(9, -3)
+6
+
+addition of one integer and default value of 98
+::
+>>> add_integer(10)
+108
+
+addition of two floats
+::
+>>> add_integer(1.2, 4.8)
+6
+
+testing addition of large integer
+::
+>>> add_integer(100000, 1)
+100001
+
+testing addition of two large integers
+::
+>>> add_integer(4294967296, 4294967296)
+8589934592
+
+testing how add_integer function handles None argument
+::
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+testing how add_integer function handles more than 2 arguments
+::
+>>> add_integer(7, 7, 7)
+Traceback (most recent call last):
+TypeError: add_integer() takes from 2 arguments but 3 were given
+
+testing how add_integer function handles both arguments not of type int or float
+::
+>>> add_integer("1", "2")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+testing how add_integer function handles if 1 argument is boolean
+::
+>>> add_integer(2, Fale)
+Traceback (most recent call last):
+TypeError: a must be an integer
