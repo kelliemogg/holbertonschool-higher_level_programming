@@ -9,6 +9,16 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    def __str__(self):
+        if self.width or self.height is 0:
+            return ("")
+        for w in range(self.width):
+            for h in range(self.height):
+                print('#')
+
+    def __repr__(self):
+        print("Rectangle({}, {})".format(self.__width, self.__height))
+
     @property
     def width(self):
         return self.__width
@@ -42,4 +52,4 @@ class Rectangle:
         if self.width > 0 and self.height > 0:
             return ((self.width * 2) + (self.height * 2))
         else:
-            return ""
+            return 0
