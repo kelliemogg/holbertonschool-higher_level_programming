@@ -15,7 +15,7 @@ def check(board, n, row, col):
 def solve(board, n, row, col):
 #base case
 #when we reach last col of last row
-    if (check(board, row, col)) and row == n - 1:
+    if (check(board, n, row, col)) and row == n - 1:
         board[row][col] = "Q"
         for i in range(n):
              print("()\n".format(board[i]))
