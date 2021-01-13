@@ -19,6 +19,7 @@ def solve(board, n, row, col):
         board[row][col] = "Q"
         for i in range(n):
              print("()\n".format(board[i]))
+        return False
 
     if col == n - 1:
 #go to next row(recurs on row)
@@ -42,4 +43,6 @@ def n_queens(n):
     print(board)
     solve(board, n, 0, 0)
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
+
+    n_queens(4)
