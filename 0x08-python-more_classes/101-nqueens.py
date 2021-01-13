@@ -18,17 +18,15 @@ def solve(board, n, row, col):
     if (check(board, row, col)) and row == n - 1:
         board[row][col] = "Q"
         for i in range(n):
-             print("()\n".format(board[i])
+             print("()\n".format(board[i]))
 
-    if col = n - 1:
-        #go to next row(recurs on row)
-        solve(board, n, row + 1, col)
+    if col == n - 1:
+#go to next row(recurs on row)
+        solve(board, n, row + 1, 0)
 #go to next row if we set a queen
     else:
         if (check(board, n, row, col)):
             board[row][col] = "Q"
-        if board[row][col] = "Q":
-            solve(board, n, row + 1, col)
 #go to next col (recurse on col)
         solve(board, n, row, col + 1)
     return
@@ -38,8 +36,10 @@ def n_queens(n):
     if n < 4:
         print("N must be at least 4")
         exit(1)
-    board = [[0 for x in range(n)] for x in range(n)]
 
+    #create a blank square of size n
+    board = [[0 for x in range(n)] for x in range(n)]
+    print(board)
     solve(board, n, 0, 0)
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
