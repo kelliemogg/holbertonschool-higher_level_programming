@@ -1,0 +1,17 @@
+==============================
+doctest for 7-base_geometry.py
+==============================
+
+Using 'basegeometry'
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+testing for negative number
+::
+>>> integer_validator("age", -3)
+[ValueError] age must be greater than 0
+
+testing for wrong type
+::
+>>> integer_validator("distance", purple)
+[TypeError] distance must be an integer
