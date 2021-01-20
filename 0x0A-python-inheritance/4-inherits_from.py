@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This module tells what class an obj is inherited from """
 
 
 def inherits_from(obj, a_class):
