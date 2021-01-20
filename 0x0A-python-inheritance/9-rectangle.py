@@ -2,38 +2,21 @@
 """ This is no longer an empty class """
 
 
-class BaseGeometry:
-    """ This function is for geometry """
-    def __init__(self, name, value):
-        self.name = name
-        self.value = value
-
-    def area(self):
-        """ Defines the area """
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """ Checks for type errors """
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
-        elif value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-        else:
-            self.value = value
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """ Applies geometry to Rectangles """
     def __init__(self, width, height):
+        self.integer_validator("width", width)
         self.__width = width
+        self.integer_validator("height", height)
         self.__height = height
 
+    def __str__(self):
+        """ string """
+        return "[Rectangle] "+ str(self.__width) + "/" + str(self.__height)
 
-    def integer_validator(self, name, value):
-        """ Checks for type errors """
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
-        elif value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-        else:
-            self.value = value
+    def area(self):
+        """ define area of obj """
+        return self.__width * self.__height
