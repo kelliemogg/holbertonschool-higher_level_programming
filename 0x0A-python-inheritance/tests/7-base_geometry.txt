@@ -22,15 +22,9 @@ TypeError: float must be an integer
 
 testing for floats
 ::
->>> obj.integer_validator("age", 3.14)
+>>> obj.integer_validator("float", 3.14)
 Traceback (most recent call last):
 TypeError: float must be an integer
-
-test for boolean
-::
->>> obj.integer_validator("distance", True)
-Traceback (most recent call last):
-ValueError: distance must be greater than 0
 
 testing for not enough args
 ::
@@ -67,9 +61,3 @@ testing for none
 >>> obj.integer_validator("None", None)
 Traceback (most recent call last):
 TypeError: None must be an integer
-
-testing for nothing
-::
->>> obj.integer_validator()
-Traceback (most recent call last):
-TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
