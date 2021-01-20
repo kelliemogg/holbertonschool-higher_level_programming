@@ -50,6 +50,12 @@ testing for not enough args
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
+testing for no value
+::
+>>> obj.integer_validator("distance")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
 testing for wrong type
 ::
 >>> obj.integer_validator("distance", "purple")
