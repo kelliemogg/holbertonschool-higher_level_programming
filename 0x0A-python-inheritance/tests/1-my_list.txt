@@ -32,9 +32,9 @@ sorting of positive and negative numbers
 >>> my_list.print_sorted()
 [-4, -3, 1, 2, 5]
 
-handling non-integers
 >>> my_list = MyList()
->>> my_list.append("orange")
 >>> my_list.append(7)
+>>> my_list.append("orange")
+>>> my_list.print_sorted()
 Traceback (most recent call last):
-TypeError: unorderable types
+TypeError: unorderable types: str() < int()
