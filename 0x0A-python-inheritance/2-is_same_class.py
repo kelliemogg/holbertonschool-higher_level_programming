@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This module tests for matching classes """
 
 
 def is_same_class(obj, a_class):
