@@ -16,9 +16,21 @@ ValueError: age must be greater than 0
 
 testing for floats
 ::
->>> obj.integer_validator("float", 3.14)
+>>> obj.integer_validator("float", 1.2345)
 Traceback (most recent call last):
 TypeError: float must be an integer
+
+testing for floats
+::
+>>> obj.integer_validator("age", 3.14)
+Traceback (most recent call last):
+TypeError: float must be an integer
+
+test for boolean
+::
+>>> obj.integer_validator("distance", True)
+Traceback (most recent call last):
+ValueError: distance must be greater than 0
 
 testing for not enough args
 ::
