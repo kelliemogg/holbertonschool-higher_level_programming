@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Module tests for what type an obj is """
 
 
 def is_kind_of_class(obj, a_class):
