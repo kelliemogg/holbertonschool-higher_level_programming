@@ -7,8 +7,8 @@ def write_file(filename="", text=""):
     lines = 0
     words = 0
     characters = 0
-    with open(filename) as file:
-        file.readline()
+    with open('filename', 'w') as file:
+        file.write('text')
         for line in file:
             wordslist = line.split()
             lines = lines + 1
