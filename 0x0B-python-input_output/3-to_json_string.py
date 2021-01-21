@@ -3,5 +3,6 @@
 
 
 def to_json_string(my_obj):
-    """ funt that returns JSON """
-    return
+    """ return func that writes an obj to a text file """
+    import json
+    return json.dumps(my_obj, ensure_ascii=False)
