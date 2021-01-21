@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" module """
-
+""" function to print text to stdout """
 
 
 def read_file(filename=""):
-    with open('my_file_0.txt', 'r') as file:
-        return file
+    """ opens file and sends to stdout """
+    with open(filename) as file:
+        print(file.read(), end="")
