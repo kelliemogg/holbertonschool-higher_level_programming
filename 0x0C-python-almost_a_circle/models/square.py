@@ -32,3 +32,25 @@ class Square(Rectangle):
         """ output of square attributes """
         return "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.size)
+
+    def update(self, *args, **kwargs):
+        """ update variables """
+        for (key, arg) in enumerate(args):
+            if key == 0:
+                self.id = int(arg)
+            elif key == 1:
+                self.size = int(arg)
+            elif key == 2:
+                self.x = int(arg)
+            elif key == 3:
+                self.y = int(arg)
+        if args is not None:
+            for (key, value) in kwargs.items():
+                if key == 'id':
+                    self.id = int(value)
+                elif key == 'size':
+                    self.size = int(value)
+                elif key == 'x':
+                    self.x = int(value)
+                elif key == 'y':
+                    self.y = int(value)
