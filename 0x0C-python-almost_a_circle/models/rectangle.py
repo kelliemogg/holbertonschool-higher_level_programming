@@ -102,3 +102,17 @@ class Rectangle(Base):
         """ string method """
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height))
+
+    def update(self, *args):
+        """ update """
+        for key, arg in enumerate(args):
+            if key == 0:
+                self.id = int(arg)
+            if key == 1:
+                self.__width = int(arg)
+            if key == 2:
+                self.__height = int(arg)
+            if key == 3:
+                self.__x = int(arg)
+            if key == 4:
+                self.__y = int(arg)
