@@ -77,17 +77,26 @@ class Rectangle(Base):
 
     def area(self):
         """ gets the area of a Rectangle """
-        return self.__width * self.__height
+        if self.__width == 0 or self.__height == 0:
+            return
+        else:
+            return self.__width * self.__height
 
     def display(self):
         """ display the rectangle using octothorps """
-        if self.__width is 0:
+        if self.__width == 0 or self.__height == 0:
             print("")
-        else:
-            for col in range(self.__height):
-                for row in range(self.__width):
-                    print("#".format(self), end="")
-                print("")
+        for y_axis in range(self.__y):
+            print(" ")
+        for col in range(self.__height):
+            for x_axis in range(self.__x):
+                print(" ", end="")
+            for row in range(self.__width + 1):
+                if row == self.__width:
+                    print("", end="")
+                else:
+                    print("#", end="")
+            print("")
 
     def __str__(self):
         """ string method """
