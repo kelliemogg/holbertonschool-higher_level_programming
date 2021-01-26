@@ -26,6 +26,14 @@ class Base:
             json_string = json.dumps(list_dictionaries, default = str)
             return json_string
 
+    def from_json_string(json_string):
+        """ returns a list from the json string """
+        if json_string is None or len(json_string) == 0:
+            return "[]"
+        else:
+            json_obj = json.loads(json_string)
+            return json_obj
+
     @classmethod
     def save_to_file(cls, list_objs):
         """ writes JSON string rep to a file """
@@ -40,4 +48,3 @@ class Base:
 
         with open(cls_name, 'w') as f:
             f.write(cls.to_json_string(list_dict))
-
