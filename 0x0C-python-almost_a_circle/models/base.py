@@ -18,6 +18,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """ returns the JSON string """
         if list_dictionaries is None or len(list_dictionaries) == 0:
@@ -26,6 +27,7 @@ class Base:
             json_string = json.dumps(list_dictionaries, default = str)
             return json_string
 
+    @staticmethod
     def from_json_string(json_string):
         """ returns a list from the json string """
         if json_string is None or len(json_string) == 0:
@@ -48,3 +50,13 @@ class Base:
 
         with open(cls_name, 'w') as f:
             f.write(cls.to_json_string(list_dict))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ creates a new instance from set values """
+        if cls.__name__ == "Rectangle":
+            dum = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dum = cls(1)
+        dum.update(**dictionary)
+        return dum
