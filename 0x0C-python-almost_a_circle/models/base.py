@@ -38,7 +38,6 @@ class Base:
         for item in list_objs:
             list_dict.append(item.to_dictionary())
 
-        j_string = cls.to_json_string(list_dict)
-
         with open(cls_name, 'w') as f:
-            json.dump(j_string, f)
+            f.write(cls.to_json_string(list_dict))
+
