@@ -10,23 +10,23 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """ initialize square """
-        super().__init__(size, size, x, y, id)
-        self.size = size
+        Rectangle.__init__(self, size, size, x, y, id)
 
     @property
     def size(self):
         """ getter for size """
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
         """ setter for size """
-        if not isinstance(value, int):
-            raise TypeError('width must be an integer')
-        elif value < 1:
-            raise ValueError('width must be > 0')
-        else:
-            self.__size = value
+#        if not isinstance(value, int):
+#            raise TypeError('width must be an integer')
+#        elif value < 1:
+#            raise ValueError('width must be > 0')
+#        else:
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """ output of square attributes """
