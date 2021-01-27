@@ -12,6 +12,19 @@ class SquareBase(unittest.TestCase):
     """ unit tests for class Square """
 
     @classmethod
-    def setUpClass(self):
-        """ set up Square """
-        pass
+    def setUp(self):
+        """ check that base id is zeroed out """
+        Square._square__nb_objects = 0
+
+    def test_rectangle_not_square(self):
+        """ sq not rect """
+        s1 = Square(5, 5, 1, 1)
+        self.assertEqual(s1.width, s1.height)
+
+    def test_var_matches(self):
+        """ matching variables """
+        s1 = Square(6, 7, 8, 9)
+        self.assertEqual(s1.size, 6)
+        self.assertEqual(s1.x, 7)
+        self.assertEqual(s1.y, 8)
+        self.assertEqual(s1.id, 9)

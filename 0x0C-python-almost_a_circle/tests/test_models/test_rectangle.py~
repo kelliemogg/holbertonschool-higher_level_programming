@@ -1,0 +1,36 @@
+#!/usr/bin/python3
+""" module containts unit tests for class Rectangle """
+
+
+import unittest
+import json
+
+from models.rectangle import Rectangle
+
+
+class RectangleBase(unittest.TestCase):
+    """ unit tests for class Rectangle """
+
+    @classmethod
+    def setUp(self):
+        """ check that rect id is zeroed out """
+        Rectangle._rectangle__nb_objects = 0
+
+#    def test_rectangle_args(self):
+#        """ number of args """
+#        r1 = Rectangle(1, 2, 3, 4, 5, 6)
+#        self.assertEqual(r1.6)
+
+    def test_rectangle_not_square(self):
+        """ sq not rect """
+        r1 = Rectangle(5, 5, 1, 1, 1)
+        self.assertNotEqual(r1.width, r1.height)
+
+    def test_var_matches(self):
+        """ matching variables """
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(r1.id, 1)
+        self.assertEqual(r1.width, 2)
+        self.assertEqual(r1.height, 3)
+        self.assertEqual(r1.x, 4)
+        self.assertEqual(r1.y, 5)
