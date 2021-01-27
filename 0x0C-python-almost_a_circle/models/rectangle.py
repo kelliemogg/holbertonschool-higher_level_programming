@@ -91,7 +91,7 @@ class Rectangle(Base):
         for col in range(self.__height):
             for x_axis in range(self.__x):
                 print(" ", end="")
-            for row in range(self.__width + 1):
+            for row in range(self.__width):
                 if row == self.__width:
                     print("", end="")
                 else:
