@@ -24,7 +24,7 @@ class Base:
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
-            json_string = json.dumps(list_dictionaries, default = str)
+            json_string = json.dumps(list_dictionaries, default=str)
             return json_string
 
     @staticmethod
@@ -69,7 +69,7 @@ class Base:
         if not cls.__name__ + ".json":
             return list_obj
         else:
-            with open(cls.__name__ + ".json", mode = "r") as f:
+            with open(cls.__name__ + ".json", mode="r") as f:
                 """ open and read the file """
                 for object in cls.from_json_string(f.read()):
                     list_obj.append(cls.create(**object))
