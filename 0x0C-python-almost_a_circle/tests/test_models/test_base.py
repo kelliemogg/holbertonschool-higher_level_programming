@@ -43,6 +43,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b7.id, 3.14)
 
     def test_rename(self):
+        """ test rename id """
         b1 = Base(4)
         b1 = Base(-5)
         b1 = Base(2)
