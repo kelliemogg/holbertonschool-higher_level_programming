@@ -30,8 +30,9 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """ returns a list from the json string """
+        a = []
         if json_string is None or len(json_string) == 0:
-            return "[]"
+            return a
         else:
             json_obj = json.loads(json_string)
             return json_obj
