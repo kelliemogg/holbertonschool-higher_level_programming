@@ -16,10 +16,19 @@ class RectangleBase(unittest.TestCase):
         """ check that rect id is zeroed out """
         Rectangle._rectangle__nb_objects = 0
 
-#    def test_rectangle_args(self):
-#        """ number of args """
-#        r1 = Rectangle(1, 2, 3, 4, 5, 6)
-#        self.assertEqual(r1.6)
+    def test_rectangle_args(self):
+        """ number of args """
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, 3, 4, 5, 6)
+            r2 = Rectangle(1, 0, 3, 4)
+            r3 = Rectangle(0, 1, 2, 3.5)
+            r4 = Rectangle("", 1, 1, 3)
+            r5 = Rectangle(9, -3, 4, 5)
+            r6 = Rectangle("lol", -3, 1, 2)
+            r7 = Rectangle(-2, -3, -4, -6)
+            r8 = Rectangle(1, 2)
+            r8 = Rectangle(4)
+            r9 = Rectangle("reishi")
 
     def test_var_matches(self):
         """ matching variables """

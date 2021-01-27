@@ -65,3 +65,5 @@ class TestBase(unittest.TestCase):
         self.assertIs(type(j_string), str)
         self.assertIs(type(t_d), dict)
 
+#    def test_from_json_string(self):
+#        """ test obj from a json string """

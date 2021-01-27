@@ -28,3 +28,17 @@ class SquareBase(unittest.TestCase):
         self.assertEqual(s1.x, 7)
         self.assertEqual(s1.y, 8)
         self.assertEqual(s1.id, 9)
+
+    def test_square_args(self):
+        """ number of args """
+        with self.assertRaises(TypeError):
+            s1 = Square(1, 2, 3, 4, 5, 6)
+            s2 = Square(1, 4, 3)
+            s3 = Square(0, 1, 1, 3.5)
+            s4 = Square("", 1, 1, 3)
+            s5 = Square(9, 4, 4, 5)
+            s6 = Square("lol", -3, 1, 2)
+            s7 = Square(-2, -3, -4, -6)
+            s8 = Square(1, 2)
+            s8 = Square(4)
+            s9 = Square("reishi")
