@@ -1,5 +1,2 @@
-Enter password:
-Database
-information_schema
-mysql
-performance_schema
+#lists all databases of your MySQL server
+SHOW DATABASES;
