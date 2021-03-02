@@ -1,2 +1,4 @@
+-- Open hbtn_0d_usa database
 -- Lists all the cities of California that can be found in hbtn_0d_usa
+USE hbtn_0d_usa;
 SELECT * FROM cities WHERE cities.id='California' ORDER BY cities.id;
