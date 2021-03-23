@@ -7,8 +7,7 @@ function factorial (num) {
 
   if (isNaN(num) === false) {
     return answer;
-  }
-  if (num === 0 || num === 1) {
+  } else if (num === 0 || num === 1) {
     return answer;
   } else {
     for (i = num; i >= 1; i--) {
