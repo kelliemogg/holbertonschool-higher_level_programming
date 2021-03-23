@@ -5,6 +5,9 @@ function factorial (num) {
   let answer = 1;
   let i;
 
+  if (isNaN(num) === false) {
+    return answer;
+  }
   if (num === 0 || num === 1) {
     return answer;
   } else {
