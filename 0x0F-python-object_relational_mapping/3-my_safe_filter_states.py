@@ -17,9 +17,8 @@ if __name__ == '__main__':
     c = serv.cursor()
     arg = argv[4]
 
-
     c.execute(
-        "SELECT * FROM states WHERE states.name = %s ORDER BY states.id;",\
+        "SELECT * FROM states WHERE states.name = %s ORDER BY states.id;",
         (arg,))
     fields = c.fetchall()
 

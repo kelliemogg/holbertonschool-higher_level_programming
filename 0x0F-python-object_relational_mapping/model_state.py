@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Contains definition of a State and an instance Base = declarative_base() """
+""" Contains definition of a State """
 
 
 from sqlalchemy import Column, Integer, String
