@@ -7,24 +7,26 @@ if __name__ == '__main__':
     import MySQLdb
     from sys import argv
 
-serv = MySQLdb.connect(
-    host="localhost",
-    port=3306,
-    user=argv[1],
-    passwd=argv[2],
-    db=argv[3])
+    serv = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3])
 
-c = serv.cursor()
-arg = argv[4]
-clean = []
+    c = serv.cursor()
+    clean = []
+    arg = argv[4]
 
-c.execute(
-    "SELECT cities.name FROM cities JOIN states ON cities.state_id = states.id WHERE states.name = %s ORDER BY states.id ASC;", (arg,))
-fields = c.fetchall()
+    c.execute(
+        "SELECT cities.name FROM cities JOIN states ON cities.state_id =\
+        states.id WHERE states.name = %s ORDER BY states.id ASC;", (arg,))
 
-for field in fields:
-    clean += field
-print(', '.join(clean))
+    fields = c.fetchall()
 
-c.close()
-serv.close()
+    for field in fields:
+        clean += field
+    print(', '.join(clean))
+
+    c.close()
+    serv.close()
