@@ -8,8 +8,10 @@ if __name__ == '__main__':
 
 serv = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                        passwd=argv[2], db=argv[3])
+""" Connect to MySQLdb """
 
 c = serv.cursor()
+""" serv """
 
 c.execute("SELECT * FROM states ORDER BY states.id ASC")
 fields = c.fetchall()
