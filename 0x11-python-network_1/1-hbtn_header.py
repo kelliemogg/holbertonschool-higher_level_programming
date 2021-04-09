@@ -8,7 +8,7 @@ import sys
 
 url = sys.argv[1]
 
-if sys.argv is not None:
+if url is not None:
     with urllib.request.urlopen(url) as response:
         page = response.info()
         print(page.get("X-Request-ID"))
