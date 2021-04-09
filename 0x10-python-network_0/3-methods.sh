@@ -1,2 +1,3 @@
 #!/bin/bash
-curl -X -H
+# displays all http methods
+curl -sI "$1" | grep "Allow" | cut -d " "
