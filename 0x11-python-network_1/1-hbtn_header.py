@@ -6,9 +6,9 @@ if __name__ == "__main__":
     import urllib.request
     import sys
 
-url = sys.argv[1]
+    url = sys.argv[1]
 
-if url is not None:
-    with urllib.request.urlopen(url) as response:
-        page = response.info()
-        print(page.get("X-Request-Id"))
+    if url is not None:
+        with urllib.request.urlopen(url) as response:
+            page = response.info()
+            print(page.get("X-Request-Id"))
