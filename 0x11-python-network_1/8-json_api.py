@@ -6,20 +6,18 @@ import sys
 
 if __name__ == "__main__":
 
-    let = sys.argv[1]
-
     if len(sys.argv) < 2:
-        q = ""
+        print('No result')
     else:
-        q = let
-        l_d {"q": q}
-    url = 'http://0.0.0.0:5000/search_user'
-    r = requests.post(url, l_d)
-    try:
-        jason = r.json()
-        if jason == {}:
-            print('No result')
-        else:
-            print('[{}] {}'.format(jason["id"], jason["name"]))
-    except:
-        print('Not a valid JSON')
+        q = sys.argv[1]
+        l_d = {"q": q}
+        url = 'http://0.0.0.0:5000/search_user'
+        r = requests.post(url, l_d)
+        try:
+            jason = r.json()
+            if jason == {}:
+                print('No result')
+            else:
+                print('[{}] {}'.format(jason['id'], jason['name']))
+        except:
+            print('Not a valid JSON')
