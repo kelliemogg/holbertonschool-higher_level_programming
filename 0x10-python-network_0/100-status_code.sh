@@ -1,3 +1,3 @@
 #!/bin/bash
 # status code
-curl -X -H
+curl -0 /dev/null --silent --head --write-out '%{http_code}\n'
